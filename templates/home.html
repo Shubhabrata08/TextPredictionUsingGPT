@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+
+            <a href="#" class="navbar-brand">Home</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#GPT1" class="nav-link">GPT1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#GPT2" class="nav-link">GPT2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#About" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Section for GPT -->
+    <section class="bg-dark text-light p-5 text-start">
+        <div class="container">
+            <div class="d-sm-flex">
+                <div>
+                    <h2>Implementation of simple <span class="text-warning">GPTs</span></h2>
+                    <p class="lead text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae quasi, suscipit neque deleniti labore voluptatibus quis pariatur eveniet veniam aliquam, quod nihil assumenda tenetur sint impedit corrupti! Rerum, commodi optio dignissimos totam laudantium est cupiditate quo beatae quam repudiandae, harum quidem distinctio pariatur mollitia adipisci, fugiat odit tempora libero!</p>
+                </div>
+                <img clas="img-fluid w-50" src="https://picsum.photos/400" alt="DecoderNetwork">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <div class="d-flex flex-row justify-content-evenly bg-dark ">
+        <div class="card m-3 " style="width: 25rem;">
+            <img src="https://picsum.photos/500/500" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Character Tokenized GPT-1</p>
+                <a href="/gpt1" class="btn btn-primary">Try GPT-1</a>
+            </div>
+        </div>
+
+        <div class="card m-3" style="width: 25rem;">
+            <img src="https://picsum.photos/500/500" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Next word predictor using pre-trained GPT-2</p>
+                <a href="/gpt2" class="btn btn-primary">Try GPT-2</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
