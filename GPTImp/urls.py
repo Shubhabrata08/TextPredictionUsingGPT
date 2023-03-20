@@ -19,6 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('GPT2WordPrediction.urls')),
-    path('gpt1/',include('GPT2WordPrediction.urls'))
-
+    path('gpt1/',include('GPT2WordPrediction.urls')),
+    path('api/',include('api.urls'))
 ]
