@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-p*e#&b$zeb%rz-or+b=rbohd2!*r$pc@6hju04^x4diw5^6)h=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'api',
+    'GPT2WordPrediction',
 ]
 
 MIDDLEWARE = [

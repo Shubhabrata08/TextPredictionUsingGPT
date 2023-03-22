@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-dark" style="font-family: 'Roboto';">
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark m-3">
         <div class="container">
 
             <a href="#" class="navbar-brand">Home</a>
@@ -24,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#GPT1" class="nav-link">GPT1</a>
+                        <a href="gpt1" class="nav-link">GPT1</a>
                     </li>
                     <li class="nav-item">
                         <a href="#GPT2" class="nav-link">GPT2</a>
@@ -54,8 +56,8 @@
         <div class="card m-3 " style="width: 25rem;">
             <img src="https://picsum.photos/500/500" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Character Tokenized GPT-1</p>
+                <h5 class="card-title">Character Tokenized GPT-1</h5>
+                <p class="card-text">Try out a Character tokenized GPT-1 (decoder only) trained on Shakespeare Stories text dataset and watch it blabber Shakesperean words </p>
                 <a href="/gpt1" class="btn btn-primary">Try GPT-1</a>
             </div>
         </div>
@@ -63,8 +65,8 @@
         <div class="card m-3" style="width: 25rem;">
             <img src="https://picsum.photos/500/500" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Next word predictor using pre-trained GPT-2</p>
+                <h5 class="card-title">Pre-Trained GPT-2 for next word prediction</h5>
+                <p class="card-text">Try out a pre-trained GPT based on GPT2Tokenizer which generates a requested number of words while maintaining context of given string</p>
                 <a href="/gpt2" class="btn btn-primary">Try GPT-2</a>
             </div>
         </div>
