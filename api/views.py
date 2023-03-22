@@ -12,15 +12,13 @@ pathToModel=os.path.join(os.getcwd(),'api','gpt1model','GPT5000.pb')
 m = torch.load(pathToModel,map_location=torch.device('cpu'))
 m.eval()
 print(pathToModel)
+@api_view(['GET'])
 def modelTest(request):
     # model = BigramLanguageModel()
     # print(os.getcwd())
-    print(device)
+    # print(device)
     context = torch.zeros((1, 1), dtype=torch.long, device=device)
-    output=decode(m.generate(context, max_new_tokens=2000)[0].tolist())
-    print(output)
-    return HttpResponse(output)
-@api_view(['POST'])
-def getData(request):
-    output={'outputString':'huihuihui'}
+    outputString=decode(m.generate(context, max_new_tokens=40)[0].tolist())
+    output={'outputString':outputString}
     return Response(output)
+
