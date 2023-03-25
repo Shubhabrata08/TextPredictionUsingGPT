@@ -22,6 +22,9 @@ def modelTest(request):
     # context[0]
     outputString=decode(m.generate(context, max_new_tokens=num_char)[0].tolist())
     # outputString=outputString.replace("\n",'<br />')
+    print(outputString[:1])
+    while(outputString[:1]=="\n"):
+        outputString=outputString[1:]
     output={'outputString':outputString}
     print(output)
     return JsonResponse(output)
