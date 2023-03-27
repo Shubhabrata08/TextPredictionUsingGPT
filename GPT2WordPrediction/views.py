@@ -6,3 +6,6 @@ def homepage(request):
 
 def gpt1(request):
     return render(request,'gpt1.html')
+
+def gpt2(request):
+    return render(request,'gpt2.html')

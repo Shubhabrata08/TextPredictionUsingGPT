@@ -59,3 +59,16 @@ button {
     font-size: 3rem;
     white-space: pre-wrap;
 }
+
+#gpt2textarea
+{
+    background: #171826;
+    color: aliceblue;
+    font-size: 2rem;
+    width: 85%;
+    height: 90%;
+}
+#textAreaDiv
+{
+    height: 80vh;
+}
