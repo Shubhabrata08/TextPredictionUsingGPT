@@ -1,3 +1,37 @@
+
+let input = document.getElementById("gpt2textarea");
+var inpLength=0;
+// let suggestion = document.getElementById("suggestion");
+//Enter key code
+const enterKey = 13;
+console.log("TextPredict Online");
+window.onload = () => {
+  input.value = "";
+  clearSuggestion();
+};
+
+const clearSuggestion = () => {
+  suggestion.innerHTML = "";
+  console.log("Working");
+};
+
+//Execute function on input
+input.addEventListener("input", (e) => {
+  clearSuggestion();
+});
+
+//   Complete predictive text on enter key
+input.addEventListener("keydown", (e) => {
+  //When user presses enter and suggestion exists
+  if (e.keyCode == enterKey && suggestion.innerText != "") {
+    e.preventDefault();
+    var str=suggestion.innerText.substring(inpLength);
+    input.value += str;
+    //clear the suggestion
+    clearSuggestion();
+  }
+});
+
 let inactivityTime = function () {
     let time;
     window.onload = resetTimer;
@@ -19,12 +53,15 @@ let inactivityTime = function () {
                 success: function (result) {
                     // hideLoading();
                     var inpString = document.getElementById("gpt2textarea").value;
+                    inpLength=inpString.length;
                     var genStr = result.outputString;
-                    // genStr=genStr.substring(inpString.length);
-                    // console.log(genStr);
                     let suggestion=document.getElementById("suggestion");
-                    suggestion.innerHTML=genStr.substring(inpString.length);
-                    // console.log(suggestionText);
+                    suggestion.innerHTML="";
+                    for(let i=0;i<inpString.length;i++)
+                    {
+                        suggestion.innerHTML+="&nbsp;";
+                    }
+                    suggestion.innerHTML+=genStr.substring(inpString.length);
                 },
                 error: function (result) {
                     alert('error');

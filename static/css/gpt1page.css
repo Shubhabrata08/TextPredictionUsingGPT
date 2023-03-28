@@ -71,9 +71,12 @@ button {
     color: aliceblue;
     font-size: 2rem;
     width: var(--width);
+    font-family: monospace;
     /* height: min-content; */
     resize: none;
     overflow:auto;
+    padding: 0;
+    margin: 0;
 }
 #homePagePic
 {
@@ -84,10 +87,14 @@ button {
 {
     position: absolute;
     z-index: 1;
-    color: aliceblue;
+    font-size: 2rem;
+    font-family: monospace;
+    color:#9c41f2;
     width: var(--width);
     height: var(--text-area-height);
     pointer-events: none;
+    word-wrap: break-word;
+    overflow: hidden;
     
 }
 .inputDiv
@@ -95,4 +102,6 @@ button {
     border: 0 !important;
     outline: 0;
     height: var(--text-area-height);
+    line-break: anywhere;
+    overflow: hidden;
 }

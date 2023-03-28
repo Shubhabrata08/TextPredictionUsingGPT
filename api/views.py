@@ -72,7 +72,7 @@ def gpt2Test(request):
     inputString=(request.POST['inpString'])
     print(type(inputString))
     # outputString="HUI"
-    outputString=predict_next_word(inputString,num_words=5)
+    outputString=predict_next_word(inputString,num_words=20)
     output={'outputString':outputString}
     print(output)
     return JsonResponse(output)
