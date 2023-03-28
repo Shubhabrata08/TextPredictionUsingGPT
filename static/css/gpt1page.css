@@ -1,3 +1,8 @@
+:root {
+    --width: 85%;
+    --text-area-height: 20rem
+}
+
 body
 {
     background: #000;
@@ -65,17 +70,29 @@ button {
     background: #171826;
     color: aliceblue;
     font-size: 2rem;
-    width: 85%;
-    height: min-content;
-    resize: vertical;
+    width: var(--width);
+    /* height: min-content; */
+    resize: none;
     overflow:auto;
-}
-#textAreaDiv
-{
-    height: 100vh;
 }
 #homePagePic
 {
     border-radius: 5%;
     margin: 2%;
+}
+.suggestionDiv
+{
+    position: absolute;
+    z-index: 1;
+    color: aliceblue;
+    width: var(--width);
+    height: var(--text-area-height);
+    pointer-events: none;
+    
+}
+.inputDiv
+{
+    border: 0 !important;
+    outline: 0;
+    height: var(--text-area-height);
 }

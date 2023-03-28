@@ -22,7 +22,8 @@ let inactivityTime = function () {
                     var genStr = result.outputString;
                     // genStr=genStr.substring(inpString.length);
                     // console.log(genStr);
-                    var suggestionText = genStr.substring(inpString.length);
+                    let suggestion=document.getElementById("suggestion");
+                    suggestion.innerHTML=genStr.substring(inpString.length);
                     // console.log(suggestionText);
                 },
                 error: function (result) {

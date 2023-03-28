@@ -62,10 +62,8 @@ let words = [
 //   };
   
   //Execute function on input
-  input.addEventListener("gpt2textarea", (e) => {
+  input.addEventListener("input", (e) => {
     clearSuggestion();
-    console.log("Working");
-    console.log(input.value);
     // //Convert input value to regex since string.startsWith() is case sensitive
     // let regex = new RegExp("^" + input.value, "i");
     // //loop through words array
@@ -81,13 +79,13 @@ let words = [
     // }
   });
   
-  //Complete predictive text on enter key
-//   input.addEventListener("keydown", (e) => {
-//     //When user presses enter and suggestion exists
-//     if (e.keyCode == enterKey && suggestion.innerText != "") {
-//       e.preventDefault();
-//       input.value = suggestion.innerText;
-//       //clear the suggestion
-//       clearSuggestion();
-//     }
-//   });
+//   Complete predictive text on enter key
+  input.addEventListener("keydown", (e) => {
+    //When user presses enter and suggestion exists
+    if (e.keyCode == enterKey && suggestion.innerText != "") {
+      e.preventDefault();
+      input.value += suggestion.innerText;
+      //clear the suggestion
+      clearSuggestion();
+    }
+  });
