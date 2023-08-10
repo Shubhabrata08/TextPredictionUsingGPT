@@ -97,7 +97,7 @@ button {
     width: var(--width);
     font-family: monospace;
     resize: none;
-    padding: 0;
+    padding: 2%;
     margin: 0;
 }
 #homePagePic
@@ -113,16 +113,17 @@ button {
     font-family: monospace;
     color:#ceca4a;
     width: var(--width);
-    height: var(--text-area-height);
+    /* height: var(--text-area-height); */
     pointer-events: none;
     word-wrap: break-word;
     overflow: hidden;
+    padding: 2%;
 }
 .inputDiv
 {
     border: 0 !important;
     outline: 0;
-    height: var(--text-area-height);
+    /* height: var(--text-area-height); */
     line-break: anywhere;
     overflow: hidden;
 }

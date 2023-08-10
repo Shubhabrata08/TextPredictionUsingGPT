@@ -75,6 +75,18 @@ let inactivityTime = function () {
     }
 };
 inactivityTime();
+$("textarea").each(function () {
+  this.setAttribute("style", "height:auto;overflow-y:hidden;");
+}).on("input", function () {
+  this.style.height = "auto";
+  this.style.height = (this.scrollHeight) + "px";
+}).on("keydown", function (e) {
+  if (e.key === "Enter") {
+      // Adjust height after Enter key press
+      this.style.height = "auto";
+      this.style.height = (this.scrollHeight) + "px";
+  }
+});
 // setInterval(() => {
 //     var x = document.getElementById("gpt2textarea").value;
 //     console.log(x);
