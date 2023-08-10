@@ -6,12 +6,13 @@ from .models import BigramLanguageModel,MultiHeadAttention,Head,device,stoi,deco
 # Create your views here.
 import torch
 import torch.nn.functional as F
-from transformers import GPT2Tokenizer, GPT2LMHeadModel
+from transformers import GPT2Tokenizer, GPT2LMHeadModel,set_seed
 import os
 import joblib,torch
 pathToModel=os.path.join(os.getcwd(),'api','gpt1model','GPT5000.pb')
 pathToGPT2Model=os.path.join(os.getcwd(),'api','gpt2model','pytorch_model.bin')
-pathToGPT2Tokenizer=os.path.join(os.getcwd(),'api','gpt2model')
+pathToGPT2=os.path.join(os.getcwd(),'api','gpt2model')
+set_seed(42)
 
 # m=joblib.load(os.path.join(os.getcwd(),'api','gpt1model','GPT5000.joblib'))
 
@@ -38,8 +39,8 @@ def modelTest(request):
 # ----------------GPT-2----------------------
 
 # Load pre-trained GPT-2 model and tokenizer
-tokenizer = GPT2Tokenizer.from_pretrained(pathToGPT2Tokenizer,local_files_only=True)
-gpt2model = GPT2LMHeadModel.from_pretrained(pathToGPT2Tokenizer,local_files_only=True)
+tokenizer = GPT2Tokenizer.from_pretrained(pathToGPT2,local_files_only=True)
+gpt2model = GPT2LMHeadModel.from_pretrained(pathToGPT2,local_files_only=True)
 
 # Set model to evaluation mode
 gpt2model.eval()
@@ -48,7 +49,7 @@ gpt2model.eval()
 def predict_next_word(text, num_words=1, temperature=1.0):
     # Tokenize input sequence and convert to tensor
     input_ids = torch.tensor(tokenizer.encode(text)).unsqueeze(0)
-    print(input_ids)
+    # print(input_ids)
     # Generate num_words next words
     for i in range(num_words):
         # Generate hidden representations of input sequence
@@ -70,9 +71,9 @@ def predict_next_word(text, num_words=1, temperature=1.0):
 @api_view(['POST'])
 def gpt2Test(request):
     inputString=(request.POST['inpString'])
-    print(type(inputString))
+    # print(inputString)
     # outputString="HUI"
-    outputString=predict_next_word(inputString,num_words=20)
+    outputString=predict_next_word(inputString,num_words=5)
     output={'outputString':outputString}
     print(output)
     return JsonResponse(output)

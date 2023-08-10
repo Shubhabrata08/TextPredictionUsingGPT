@@ -5,7 +5,21 @@
 
 body
 {
-    background: #000;
+    background-color: #000 !important;
+}
+.pageBG
+{
+    background-color: darkslategray !important;
+}
+.btnColor
+{
+    background-color:goldenrod !important;
+}
+.cardBorders
+{
+    border: rgb(235, 227, 77) solid !important;
+    border-width:0.3rem !important;
+    background-color: rgb(228, 225, 198) !important;
 }
 .typing-container {
     display: flex;
@@ -65,6 +79,16 @@ button {
     white-space: pre-wrap;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 #gpt2textarea
 {
     background: #171826;
@@ -72,9 +96,7 @@ button {
     font-size: 2rem;
     width: var(--width);
     font-family: monospace;
-    /* height: min-content; */
     resize: none;
-    overflow:auto;
     padding: 0;
     margin: 0;
 }
@@ -89,13 +111,12 @@ button {
     z-index: 1;
     font-size: 2rem;
     font-family: monospace;
-    color:#9c41f2;
+    color:#ceca4a;
     width: var(--width);
     height: var(--text-area-height);
     pointer-events: none;
     word-wrap: break-word;
     overflow: hidden;
-    
 }
 .inputDiv
 {
